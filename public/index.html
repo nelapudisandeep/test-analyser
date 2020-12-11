@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Test analyser</title>
+	<link rel="stylesheet" href="./styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+</head>
+<body class="container-wrapper">
+	<!-- header section -->
+	<header>
+		<nav>
+			<a href="#add" class="nav-link" id="addLink">Add</a>
+			<a href="#det" class="nav-link">Details</a>
+			<a href="#analyse" class="nav-link">Analysis</a>
+		</nav>
+	</header>
+
+	<!-- details section -->
+
+	<div class="hero" id="det">
+		<div class="details-section">
+			<div class="quote">
+				<h2 class="text verse">
+					Do not grieve, for the joy of the Lord is your strength.
+				</h2>
+				<p class="ref text">
+					Nehemiah 8:10
+				</p></div>
+			<h3 class="heading name">Navya Priya</h3>
+			<button id="showDetails" class="detBtn">Show Details</button>
+
+			<button id="hideDetails" class="detBtn">Hide Details</button>
+
+			<div class="summary-section text">
+				<p class="tot total">Total Exams : <span class="totalExams">3</span></p>
+
+				<p class="tot total-bio">Total Biology Exams : <span class="totalBio">0</span></p>
+
+				<p class="tot total-physics">Total Physics Exams : <span class="totalPhy">1</span></p>
+
+				<p class="tot total-chemistry">Total Chemistry Exams : <span class="totalChe">2</span></p>
+			</div>
+		</div>
+		<div class="svg-section">
+			<img src="./img/header-bg.svg" alt="svg not found">
+		</div>
+	</div>
+
+	<!-- add details of exam -->
+	<div id="add">
+		<span id="close" class="text">X</span>
+		<form action="#" method="POST" id="addExamData">
+
+			<label for="subjectname">Subject</label>
+			<select name="subjectname" id="subjectname">
+				<option value="Biology">Biology</option>
+				<option value="Physics">Physics</option>
+				<option value="Chemistry">Chemistry</option>
+			</select>
+
+			<label for="totalQuestions">No of Questions : </label>
+			<input type="number" name="totalQuestions" id="totalQuestions">
+
+			<label for="attemptedQuestions">Attempted Questions</label>
+			<input type="numbe" name="attemptedQuestions" id="attemptedQuestions">
+
+			<label for="correctQuestions">No of Correct Questions</label>
+			<input type="number" name="correctQuestions" id="correctQuestions">
+
+			<input type="submit" value="Add" class="addSubjectForm">
+		</form>
+	</div>
+
+
+	<!-- analysis section -->
+	<div id="analyse">
+		<h2 class="heading chart-title">Overall Performance</h2>
+		<canvas class="chart" id="myChart"></canvas>
+		<h2 class="heading chart-title">Biology</h2>
+		<canvas id="myBiologyChart" class="chart"></canvas>
+		<h2 class="heading chart-title">
+			Physics
+		</h2>
+		<canvas class="chart" id="myPhysicsChart"></canvas>
+		<h2 class="heading chart-title">
+			Chemistry
+		</h2>
+		<canvas class="chart" id="myChemistryChart"></canvas>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- error handling modal -->
+<div class="modal">
+	<p class="message"></p>
+</div>
+
+
+
+	<script src="./index.js" async defer="true"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
